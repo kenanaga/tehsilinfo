@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
+
 class AuthController extends Controller
 {   
 
@@ -20,8 +21,26 @@ class AuthController extends Controller
     }
 
     public function post(){
-        $datanews['news']=News::all();
+        $datanews['news']=News::orderBy('created_at','DESC')->simplePaginate(5);
         return view('admin/post',$datanews);
+    }
+
+    public function postupdate($id){
+        News::findOrFail($id);
+        $editdata['unews']=DB::table('news')->where('id',$id)->get();
+        return view('admin/editpost',$editdata);
+    }
+   
+
+    public function postdelete($id){
+        if(Auth::user()->permission ==2){
+            DB::table('news')->where('id', $id)->delete();
+            return redirect()->route('admin.post');
+        }else{
+            return "xeberi silmeye sizin icazeniz yoxdur";
+        }
+        
+
     }
 
     public function addPost(Request $request){

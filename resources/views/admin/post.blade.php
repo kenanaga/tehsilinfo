@@ -41,24 +41,22 @@
                       <td>{{$data->title}}</td>
                       <td> {{$data->getUser->name}}</td>
                       <td> {{$data->getCategory->name}}</td>
-                      <td><a href=""><button class="btn btn-success" href="update">Yenilə</button></a>
-                        <a href=""><button class="btn btn-danger" href="update">Sil</button></a>
+                      <td>
+                        <a href="update/{{$data->id}}"><button class="btn btn-success" >Yenilə</button></a>
+                        <a href="delete/{{$data->id}}"><button class="btn btn-danger">Sil</button></a>
                       </td>
                       
                     </tr> 
                     @endforeach
                  
-                  
-               
-                  
                   </tbody>
                 </table>
               </div>
               <!-- /.card-body -->
             </div>
+                  {{$news->links()}}
             <!-- /.card -->
   <!-- /.content-wrapper -->
-
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
