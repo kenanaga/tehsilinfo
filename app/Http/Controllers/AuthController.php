@@ -27,8 +27,13 @@ class AuthController extends Controller
 
     public function postupdate($id){
         News::findOrFail($id);
-        $editdata['unews']=DB::table('news')->where('id',$id)->get();
+        $editdata['updatenews']=DB::table('news')->where('id',$id)->get();
         return view('admin/editpost',$editdata);
+    }
+    public function update(){
+        
+        
+        return view('admin/editpost');
     }
    
 
