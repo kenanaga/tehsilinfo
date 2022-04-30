@@ -25,21 +25,41 @@ class AuthController extends Controller
         return view('admin/post',$datanews);
     }
 
+    //uyqun id aid xeber varsa editpost seyfesine yonllendirilecek
     public function postupdate($id){
         News::findOrFail($id);
         $editdata['updatenews']=DB::table('news')->where('id',$id)->get();
         return view('admin/editpost',$editdata);
     }
-    public function update(){
+
+    //xeberlerin update edilmesi
+    public function update(Request $request){
+        News::findOrFail($request->id);
+
+         $request->validate([
+            'title'   => 'required',
+            'content' => 'required',
+        ]);
+
+        $title   =$request->input('title');
+        $content =$request->input('content');
+        $id =$request->input('id');
+        News::where('id',$id)->update([
+            'title' => $title,
+            'content' => $content,
+        ]);
+
+       return back()->withErrors([
+            'text'   =>   'Məlumatlar uğurla yeniləndi',
+        ])->onlyInput('email');
         
         
-        return view('admin/editpost');
     }
    
 
     public function postdelete($id){
         if(Auth::user()->permission ==2){
-            DB::table('news')->where('id', $id)->delete();
+            News::where('id', $id)->delete();
             return redirect()->route('admin.post');
         }else{
             return "xeberi silmeye sizin icazeniz yoxdur";
@@ -75,7 +95,7 @@ class AuthController extends Controller
         return redirect()->route('admin.index');
         return back()->withErrors('');
     }
-
+    
     public function login(){
         return view('admin/login');
     }

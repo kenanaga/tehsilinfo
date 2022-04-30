@@ -28,19 +28,19 @@
               </div>
             </div>
             <div class="card-body">
-              @if ($errors->any())
-      <div class="alert alert-danger">
-        <b>{{$errors->first()}}</b>
-      </div>
-    @endif
-              <form action="{{route('admin.addpost')}}" method="post" enctype="multipart/form-data">
+               @if ($errors->any())
+                 <div class="alert alert-success">
+                 <b>{{$errors->first('text')}}</b>
+                 </div>
+               @endif
+    
+              <form action="{{route('post.edit')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 @foreach ($updatenews as $unews)
-                    
-              
               <div class="form-group">
                 <label for="inputName">Xəbərin başlığı</label>
                 <input type="text" name="title" value="{{$unews->title}}" id="inputName" class="form-control">
+                <input type="text" name="id" hidden value="{{$unews->id}}" id="inputName" class="form-control">
               </div>
               <div class="custom-file">
                 <input type="file" class="custom-file-input" name="image" id="customFile">
@@ -48,25 +48,15 @@
               </div>
               <div class="form-group">
                 <label for="inputDescription">Mətn</label>
-                <textarea id="summernote" value="{{$unews->content}}" name="content" class="form-control" rows="4"></textarea>
+                <textarea id="summernote"  name="content" class="form-control" rows="4">{{$unews->content}}</textarea>
               </div>
-              <div class="form-group">
-                <label for="inputStatus">Xəbərin kategoriyası</label>
-                <select id="inputStatus" name="category" class="form-control custom-select">
-                  <option selected disabled>Kategoriya seçin</option>
-                  <option name="category" value=""></option>
-                </select>
-              </div>
+              
               <div class="form-group">
                 <input type="text" name="user_id" id="inputClientCompany" hidden value="{{Auth::user()->id}}" class="form-control">
               </div>
-              <div class="form-group">
-                <label for="inputProjectLeader">Paylaşılma tarixi</label>
-                <input type="text" id="inputProjectLeader" value="{{date('Y-m-d H:i:s');}}" class="form-control">
-              </div>
               @endforeach
               <div>
-                <button class="btn btn-success">Paylaş</button>
+                <button class="btn btn-success">Yenilə</button>
               </div>
                  </form>
             </div>

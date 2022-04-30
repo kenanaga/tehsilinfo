@@ -16,11 +16,11 @@ Route::get('/adminindex', [AuthController::class, 'adminindex'])->name('admin.in
 Route::get('/addpost', [AuthController::class, 'addPost']);
 Route::post('/addpost', [AuthController::class, 'addPost'])->name('admin.addpost');
 
-Route::get('/update', [AuthController::class, 'update'])->name('post.edit')->middleware('isAdmin');
+Route::post('/update', [AuthController::class, 'update'])->name('post.edit')->middleware('isAdmin');
 Route::get('/update/{id}', [AuthController::class, 'postupdate'])->name('post.update')->middleware('isAdmin');
 Route::get('/delete/{id}', [AuthController::class, 'postdelete'])->name('post.delete')->middleware('isAdmin');
 
 
-Route::get('/login', [AuthController::class, 'login'])->name('admin.login');
+Route::get('/login', [AuthController::class, 'login'])->name('admin.login')->middleware('isNotAdmin');
 Route::post('/login', [AuthController::class, 'loginPost'])->name('admin.login.post');
 Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
