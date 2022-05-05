@@ -21,7 +21,7 @@ class AuthController extends Controller
     }
 
     public function post(){
-        $datanews['news']=News::orderBy('created_at','DESC')->simplePaginate(5);
+        $datanews['news']=News::orderBy('created_at','DESC')->simplePaginate(8);
         return view('admin/post',$datanews);
     }
 

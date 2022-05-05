@@ -2,12 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FrontController;
 use App\Http\Middleware\isAdmin;
 
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::get('/', [FrontController::class, 'index']);
+
+//Route::get('/singlepost', [FrontController::class, 'singlepost']);
+
+Route::get('/singlepost/{id}/{slug}', [FrontController::class, 'singlepost']);
 
 Route::get('/post', [AuthController::class, 'post'])->name('admin.post')->middleware('isAdmin');
 Route::get('/adminindex', [AuthController::class, 'adminindex'])->name('admin.index')->middleware('isAdmin');
