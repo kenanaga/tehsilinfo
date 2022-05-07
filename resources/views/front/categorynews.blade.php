@@ -9,12 +9,11 @@
                data-bg-image="media/elements/element_1.png">
                <div class="container">
                   <div class="row gutter-24">
-                     <!-- end col -->
-                     @foreach($special as $snews)
-                     <div class="col-xl-3 col-md-6  wow fadeInUp" data-wow-delay="400ms" data-wow-duration="800ms">
+                     @foreach($pspecial as $snews)
+                     <div class="col-xl-3 col-md-6  wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">
                         <div class="rt-post post-sm style-1">
                            <div class="post-img">
-                              <a href="single-post1.html">
+                              <a href="{{asset('/singlepost')}}/{{$snews->id}}/{{$snews->slug}}">
                                  <img src="{{asset('public/upload')}}/{{$snews->image}}" alt="post" width="100" height="100">
                               </a>
                            </div>
@@ -32,7 +31,7 @@
                            </div>
                         </div>
                      </div>
-                     @endforeach 
+                     @endforeach
                      <!-- end col -->
                   </div>
                   <!-- end row -->
@@ -84,7 +83,7 @@
                   <div class="row gutter-24">
 
             
-                     @foreach ($news as $ndata)
+                     @foreach ($cnews as $ndata)
                          
                      
 
@@ -122,7 +121,7 @@
                      </div>
                      <!-- end col -->
                      @endforeach
-                     {{$news->links()}}
+                     {{$cnews->links()}}
                   </div>
                   <!-- end row -->
                </div>

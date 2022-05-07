@@ -66,35 +66,35 @@
                                  <li class="main-menu__nav_sub list active">
                                     <a class="animation" href="javascript:void(0)">Xəbərlər</a>
                                     <ul class="main-menu__dropdown">
-                                       <li><a href="about.html">Köşə Yazıları</a></li>
+                                       <li><a href="{{asset('/kateqoriya/kose-yazilari')}}">Köşə Yazıları</a></li>
                                     </ul>
                                  </li>
                                  <li class="main-menu__nav_sub list">
                                     <a class="animation" href="javascript:void(0)">Vakansiyalar</a>
                                     <ul class="main-menu__dropdown">
-                                       <li><a href="author.html">Təcrübə Proqramları</a></li>
-                                       <li><a href="author.html">Könüllülük</a></li>
+                                       <li><a href="{{asset('/kateqoriya/tecrube-proqramlari')}}">Təcrübə Proqramları</a></li>
+                                       <li><a href="{{asset('/kateqoriya/konulluluk')}}">Könüllülük</a></li>
                                     </ul>
                                  </li>
                                  <li class="main-menu__nav_sub list">
                                     <a class="animation" href="javascript:void(0)">Tədbirlər</a>
                                     <ul class="main-menu__dropdown">
-                                       <li><a href="life-style.html">Seminarlar</a></li>
-                                       <li><a href="technology.html">Təlimlər</a></li>
-                                       <li><a href="gaming.html">Müsabiqələr</a></li>
-                                       <li><a href="graphics.html">Konfranslar</a></li>
+                                       <li><a href="{{asset('/kateqoriya/seminarlar')}}">Seminarlar</a></li>
+                                       <li><a href="{{asset('/kateqoriya/telimler')}}">Təlimlər</a></li>
+                                       <li><a href="{{asset('/kateqoriya/musabiqeler')}}">Müsabiqələr</a></li>
+                                       <li><a href="{{asset('/kateqoriya/konfranslar')}}">Konfranslar</a></li>
                                     </ul>
                                  </li>
                                  <li class="main-menu__nav_sub list">
                                     <a class="animation" href="javascript:void(0)">Təhsil</a>
                                     <ul class="main-menu__dropdown">
-                                       <li><a href="about.html">Xaricdə Təhsil</a></li>
+                                       <li><a href="{{asset('/kateqoriya/xaricde-tehsil')}}">Xaricdə Təhsil</a></li>
                                     </ul>
                                  </li>
                                  <li class="main-menu__nav_sub list">
                                     <a class="animation" href="{{asset('/')}}">Haqqımızda</a>
                                     <ul class="main-menu__dropdown">
-                                       <li><a href="single-shop.html">Elan Göndər</a></li>
+                                       <li><a href="#">Elan Göndər</a></li>
                                     </ul>
                                  </li>
                               </ul>
@@ -150,38 +150,38 @@
                      <nav class="menu-main-primary-container">
                         <ul class="menu">
                            <li class="list menu-item-has-children">
-                              <a class="animation" href="javascript:void(0)">Xəbərlər</a>
+                              <a class="animation" href="{{asset('/')}}">Xəbərlər</a>
                               <ul class="main-menu__dropdown sub-menu">
-                                 <li><a href="index.html">Köşə Yazıları</a></li>
+                                 <li><a href="{{asset('/kateqoriya/kose-yazilari')}}">Köşə Yazıları</a></li>
                               </ul>
                            </li>
                            <li class="list menu-item-has-children">
                               <a class="animation" href="javascript:void(0)">Vakansiyalar</a>
                               <ul class="main-menu__dropdown sub-menu">
-                                 <li><a href="author.html">Təcrübə Proqramları</a></li>
-                                 <li><a href="author.html">Könüllülük</a></li>
+                                 <li><a href="{{asset('/kateqoriya/tecrube-proqramlari')}}">Təcrübə Proqramları</a></li>
+                                 <li><a href="{{asset('/kateqoriya/konulluluk')}}">Könüllülük</a></li>
                               </ul>
 
                            </li>
                            <li class="list menu-item-has-children">
                               <a class="animation" href="javascript:void(0)">Tədbirlər</a>
                               <ul class="main-menu__dropdown sub-menu">
-                                 <li><a href="life-style.html">Seminarlar</a></li>
-                                 <li><a href="technology.html">Təlimlər</a></li>
-                                 <li><a href="gaming.html">Müsabiqələr</a></li>
-                                 <li><a href="graphics.html">Konfranslar</a></li>
+                                 <li><a href="{{asset('/kateqoriya/seminarlar')}}">Seminarlar</a></li>
+                                 <li><a href="{{asset('/kateqoriya/telimler')}}">Təlimlər</a></li>
+                                 <li><a href="{{asset('/kateqoriya/musabiqeler')}}">Müsabiqələr</a></li>
+                                 <li><a href="{{asset('/kateqoriya/konfranslar')}}">Konfranslar</a></li>
                               </ul>
                            </li>
                            <li class="list menu-item-has-children">
-                              <a class="animation" href="javascript:void(0)">Təhsil</a>
+                              <a class="animation" href="{{asset('/kateqoriya/tehsil')}}">Təhsil</a>
                               <ul class="main-menu__dropdown sub-menu">
-                                 <li><a href="about.html">Xaricdə Təhsil</a></li>
+                                 <li><a href="{{asset('/kateqoriya/xaricde-tehsil')}}">Xaricdə Təhsil</a></li>
                               </ul>
                            </li>
                            <li class="list menu-item-has-children">
                               <a class="animation" href="{{asset('/')}}">Haqqımızda</a>
                               <ul class="main-menu__dropdown sub-menu">
-                                 <li><a href="shop.html">Elan Göndər</a></li>
+                                 <li><a href="#">Elan Göndər</a></li>
                               </ul>
                            </li>
                         </ul>

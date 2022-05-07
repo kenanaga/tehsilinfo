@@ -156,8 +156,8 @@
                                           <div class="slide-item">
                                              <div class="rt-post-grid grid-meta">
                                                 <div class="post-img">
-                                                   <a href="single-post1.html">
-                                                      <img src="{{asset('front/media/gallery/post-md_45.jpg')}}" alt="post" width="551"
+                                                   <a href="{{asset('/singlepost')}}/{{$rnews->id}}/{{$rnews->slug}}">
+                                                      <img src="{{asset('public/upload')}}/{{$rnews->image}}" alt="post" width="551"
                                                          height="431">
                                                    </a>
                                                 </div>
@@ -170,7 +170,7 @@
                                                    </h4>
                                                    <span class="rt-meta">
                                                       <i class="far fa-calendar-alt icon"></i>
-                                                      DECEMBER 12, 2022
+                                                      {{$rnews['created_at']->diffForHumans()}}
                                                    </span>
                                                 </div>
                                              </div>
@@ -186,7 +186,7 @@
                               </div>
                               <!-- end related-post-box -->
 
-                           </div>
+                           </div> 
                            <!-- end rt-main-post-single -->
                         </div>
                         <!-- end rt-left-sidebar-sapcer-5 -->
@@ -245,138 +245,29 @@
                                  <span class="rt-section-line"></span>
                               </h2>
                               <div class="post-list">
+                                 @foreach($pspecial as $snews)
                                  <div class="item">
                                     <div class="rt-post post-sm style-1">
                                        <div class="post-img">
-                                          <a href="single-post1.html">
-                                             <img src="{{asset('front/media/gallery/post-sm_1.jpg')}}" alt="post" width="100" height="100">
+                                          <a href="{{asset('/singlepost')}}/{{$snews->id}}/{{$snews->slug}}">
+                                             <img src="{{asset('public/upload')}}/{{$snews->image}}" alt="post" width="100" height="100">
                                           </a>
                                        </div>
                                        <div class="ms-4 post-content">
-                                          <a href="gaming.html" class="rt-post-cat-normal">Sports</a>
+                                          <a href="{{asset('/kateqoriya')}}/{{$snews->GetCategory->slug}}" class="rt-post-cat-normal">{{$snews->GetCategory->name}}</a>
                                           <h4 class="post-title">
-                                             <a href="single-post1.html">
-                                                Top Beste ampute are
-                                                Speak Market.
+                                             <a href="{{asset('/singlepost')}}/{{$snews->id}}/{{$snews->slug}}">
+                                                {{$snews->title}}
                                              </a>
                                           </h4>
                                           <span class="rt-meta">
                                              <i class="far fa-calendar-alt icon"></i>
-                                             DECEMBER 9, 2022
+                                             {{$rnews['created_at']->diffForHumans()}}
                                           </span>
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="item">
-                                    <div class="rt-post post-sm style-1">
-                                       <div class="post-img">
-                                          <a href="single-post1.html">
-                                             <img src="media/gallery/post-sm_2.jpg" alt="post" width="100" height="100">
-                                          </a>
-                                       </div>
-                                       <div class="ms-4 post-content">
-                                          <a href="gaming.html" class="rt-post-cat-normal">Sports</a>
-                                          <h4 class="post-title">
-                                             <a href="single-post1.html">
-                                                Top Beste ampute are
-                                                Speak Market.
-                                             </a>
-                                          </h4>
-                                          <span class="rt-meta">
-                                             <i class="far fa-calendar-alt icon"></i>
-                                             DECEMBER 9, 2022
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="item">
-                                    <div class="rt-post post-sm style-1">
-                                       <div class="post-img">
-                                          <a href="single-post1.html">
-                                             <img src="media/gallery/post-sm_3.jpg" alt="post" width="100" height="100">
-                                          </a>
-                                       </div>
-                                       <div class="ms-4 post-content">
-                                          <a href="gaming.html" class="rt-post-cat-normal">Sports</a>
-                                          <h4 class="post-title">
-                                             <a href="single-post1.html">
-                                                Top Beste ampute are
-                                                Speak Market.
-                                             </a>
-                                          </h4>
-                                          <span class="rt-meta">
-                                             <i class="far fa-calendar-alt icon"></i>
-                                             DECEMBER 9, 2022
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="item">
-                                    <div class="rt-post post-sm style-1">
-                                       <div class="post-img">
-                                          <a href="single-post1.html">
-                                             <img src="media/gallery/post-sm_3.jpg" alt="post" width="100" height="100">
-                                          </a>
-                                       </div>
-                                       <div class="ms-4 post-content">
-                                          <a href="gaming.html" class="rt-post-cat-normal">Sports</a>
-                                          <h4 class="post-title">
-                                             <a href="single-post1.html">
-                                                Top Beste ampute are
-                                                Speak Market.
-                                             </a>
-                                          </h4>
-                                          <span class="rt-meta">
-                                             <i class="far fa-calendar-alt icon"></i>
-                                             DECEMBER 9, 2022
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="item">
-                                    <div class="rt-post post-sm style-1">
-                                       <div class="post-img">
-                                          <a href="single-post1.html">
-                                             <img src="media/gallery/post-sm_3.jpg" alt="post" width="100" height="100">
-                                          </a>
-                                       </div>
-                                       <div class="ms-4 post-content">
-                                          <a href="gaming.html" class="rt-post-cat-normal">Sports</a>
-                                          <h4 class="post-title">
-                                             <a href="single-post1.html">
-                                                Top Beste ampute are
-                                                Speak Market.
-                                             </a>
-                                          </h4>
-                                          <span class="rt-meta">
-                                             <i class="far fa-calendar-alt icon"></i>
-                                             DECEMBER 9, 2022
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="item">
-                                    <div class="rt-post post-sm style-1">
-                                       <div class="post-img">
-                                          <a href="single-post1.html">
-                                             <img src="media/gallery/post-sm_4.jpg" alt="post" width="100" height="100">
-                                          </a>
-                                       </div>
-                                       <div class="ms-4 post-content">
-                                          <a href="gaming.html" class="rt-post-cat-normal">Sports</a>
-                                          <h4 class="post-title">
-                                             <a href="single-post1.html">
-                                                Top Beste ampute are
-                                                Speak Market.
-                                             </a>
-                                          </h4>
-                                          <span class="rt-meta">
-                                             <i class="far fa-calendar-alt icon"></i>
-                                             DECEMBER 9, 2022
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
+                                 @endforeach
                               </div>
                            </div>
                            <!-- end slidebar wrap  -->

@@ -11,7 +11,7 @@ Route::get('/welcome', function () {
 
 Route::get('/', [FrontController::class, 'index']);
 
-//Route::get('/singlepost', [FrontController::class, 'singlepost']);
+Route::get('/kateqoriya/{cat}', [FrontController::class, 'category']);
 
 Route::get('/singlepost/{id}/{slug}', [FrontController::class, 'singlepost']);
 

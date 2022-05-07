@@ -50,36 +50,36 @@
              <div class="col-xl-3 col-md-6 wow fadeInUp d-flex justify-content-xl-center justify-content-start"
                 data-wow-delay="400ms" data-wow-duration="800ms">
                 <div class="footer-widget">
-                   <h3 class="footer-widget-title">Categories</h3>
+                   <h3 class="footer-widget-title">Kateqoriyalar</h3>
                    <ul class="widget-list cat-list">
                       <li class="widget-list-item">
-                         <a href="politics.html" class="widget-list-link">
-                            Politics
+                         <a href="{{asset('/kateqoriya/kose-yazilari')}}" class="widget-list-link">
+                            Köşə Yazıları
                          </a>
                       </li>
                       <li class="widget-list-item">
-                         <a href="politics.html" class="widget-list-link">
-                            Business
+                         <a href="{{asset('/kateqoriya/tecrube-proqramlari')}}" class="widget-list-link">
+                            Təcrübə Proqramları
                          </a>
                       </li>
                       <li class="widget-list-item">
-                         <a href="technology.html" class="widget-list-link">
-                            Technology
+                         <a href="{{asset('/kateqoriya/konulluluk')}}" class="widget-list-link">
+                            Könüllülük
                          </a>
                       </li>
                       <li class="widget-list-item">
-                         <a href="life-style.html" class="widget-list-link">
-                            Health
+                         <a href="{{asset('/kateqoriya/vakansiyalar')}}" class="widget-list-link">
+                            Vakansiyalar
                          </a>
                       </li>
                       <li class="widget-list-item">
-                         <a href="life-style.html" class="widget-list-link">
-                            Sports
+                         <a href="{{asset('/kateqoriya/telimler')}}" class="widget-list-link">
+                            Təlimlər
                          </a>
                       </li>
                       <li class="widget-list-item">
-                         <a href="gaming.html" class="widget-list-link">
-                            Entertainment
+                         <a href="{{asset('/kateqoriya/seminarlar')}}" class="widget-list-link">
+                            Seminarlar
                          </a>
                       </li>
                    </ul>
@@ -116,7 +116,7 @@
     <div class="offcanvas-header">
        <div class="offcanvas-logo">
           <div class="site-branding">
-             <a class="dark-logo" href="index.html"><img width="162" height="52" src="media/logo/logo-dark.svg"
+             <a class="dark-logo" href="index.html"><img width="162" height="52" src="{{asset('front/media/logo/logo-dark.svg')}}"
                    alt="neeon"></a>
              <a class="light-logo" href="index.html"><img width="162" height="52"
                    src="{{asset('front/media/logo/logo-light.svg')}}" alt="neeon"></a>
@@ -130,7 +130,7 @@
     </div>
 
     <div class="offcanvas-widget">
-       <h3 class="offcanvas-widget-title">About Us</h3>
+       <h3 class="offcanvas-widget-title">Haqqımızda</h3>
        <p>
           The argument in favor of using filler text
           goes something like this: If you use arey
@@ -176,16 +176,16 @@
     </div>
 
     <div class="offcanvas-widget footer-widget">
-       <h3 class="offcanvas-widget-title">Contact Info</h3>
+       <h3 class="offcanvas-widget-title">Əlaqə Məlumatları</h3>
        <ul class="contact-info-list widget-list">
           <li class="widget-list-item">
              <i class="fas fa-map-marker-alt list-icon"></i>
-             Chicago 12, Melborne City, USA
+             Baki
           </li>
           <li class="widget-list-item">
              <i class="fas fa-phone-alt list-icon"></i>
              <a href="tel:123333000999" class="widget-list-link">
-                (123) 333-000-999
+                (070) 999-99-99
              </a>
           </li>
           <li class="widget-list-item">
