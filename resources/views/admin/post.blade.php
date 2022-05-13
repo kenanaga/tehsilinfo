@@ -1,5 +1,11 @@
 @include('admin/source/header');
-
+<style>
+    @media screen and (max-width: 576px){
+      #news-table{
+        width: 40rem;
+      }
+    }
+</style>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -26,31 +32,33 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example2" class="table table-bordered table-hover">
-                  <thead>
-                  <tr>
-                    <th>Xəbərin başlığı</th>
-                    <th>Yazar</th>
-                    <th>Kategoriyası</th>
-                    <th>Yenilə/Sil</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                    @foreach ($news as $data)
+                <div class="table-responsive-md">
+                  <table id="news-table" class="table table-bordered table-hover">
+                    <thead>
                     <tr>
-                      <td>{{$data->title}}</td>
-                      <td> {{$data->getUser->name}}</td>
-                      <td> {{$data->getCategory->name}}</td>
-                      <td>
-                        <a href="update/{{$data->id}}"><button class="btn btn-success" >Yenilə</button></a>
-                        <a href="delete/{{$data->id}}"><button class="btn btn-danger">Sil</button></a>
-                      </td>
-                      
-                    </tr> 
-                    @endforeach
-                 
-                  </tbody>
-                </table>
+                      <th>Xəbərin başlığı</th>
+                      <th>Yazar</th>
+                      <th>Kategoriyası</th>
+                      <th style="width: 150px">Yenilə/Sil</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      @foreach ($news as $data)
+                      <tr>
+                        <td>{{$data->title}}</td>
+                        <td> {{$data->getUser->name}}</td>
+                        <td> {{$data->getCategory->name}}</td>
+                        <td>
+                          <a href="update/{{$data->id}}"><button class="btn btn-success" >Yenilə</button></a>
+                          <a href="delete/{{$data->id}}"><button class="btn btn-danger">Sil</button></a>
+                        </td>
+                        
+                      </tr> 
+                      @endforeach
+                  
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <!-- /.card-body -->
             </div>

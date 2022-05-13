@@ -156,9 +156,9 @@
                                           <div class="slide-item">
                                              <div class="rt-post-grid grid-meta">
                                                 <div class="post-img">
-                                                   <a href="{{asset('/singlepost')}}/{{$rnews->id}}/{{$rnews->slug}}">
+                                                   <a href="{{asset('/singlepost')}}/{{$rnews->id}}/{{$rnews->title}}">
                                                       <img src="{{asset('public/upload')}}/{{$rnews->image}}" alt="post" width="551"
-                                                         height="431">
+                                                         height="431" style="height: 172px;width:306px;">
                                                    </a>
                                                 </div>
                                                 <div class="post-content">
@@ -256,7 +256,7 @@
                                        <div class="ms-4 post-content">
                                           <a href="{{asset('/kateqoriya')}}/{{$snews->GetCategory->slug}}" class="rt-post-cat-normal">{{$snews->GetCategory->name}}</a>
                                           <h4 class="post-title">
-                                             <a href="{{asset('/singlepost')}}/{{$snews->id}}/{{$snews->slug}}">
+                                             <a href="{{asset('/singlepost')}}/{{$snews->id}}/{{$snews->title}}">
                                                 {{$snews->title}}
                                              </a>
                                           </h4>

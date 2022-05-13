@@ -6,7 +6,7 @@
 
             <!-- start feature-section-style-1  -->
             <section class="rt-feature-section feature-section-style-1 overflow-hidden"
-               data-bg-image="media/elements/element_1.png">
+               data-bg-image="{{asset('front/media/elements/element_1.png')}}">
                <div class="container">
                   <div class="row gutter-24">
                      <!-- end col -->
@@ -14,14 +14,14 @@
                      <div class="col-xl-3 col-md-6  wow fadeInUp" data-wow-delay="400ms" data-wow-duration="800ms">
                         <div class="rt-post post-sm style-1">
                            <div class="post-img">
-                              <a href="single-post1.html">
+                              <a href="{{asset('/singlepost')}}/{{$snews->id}}/{{$snews->slug}}">
                                  <img src="{{asset('public/upload')}}/{{$snews->image}}" alt="post" width="100" height="100">
                               </a>
                            </div>
                            <div class="ms-4 post-content">
                               <a href="{{asset('/kateqoriya')}}/{{$snews->GetCategory->slug}}" class="rt-post-cat-normal">{{$snews->GetCategory->name}}</a>
                               <h3 class="post-title">
-                                 <a href="{{asset('/singlepost')}}/{{$snews->id}}/{{$snews->slug}}">
+                                 <a href="{{asset('/singlepost')}}/{{$snews->id}}/{{$snews->title}}">
                                     {{$snews->title}}
                                  </a>
                               </h3>
@@ -91,8 +91,8 @@
                      <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="800ms">
                         <div class="rt-post-grid grid-meta">
                            <div class="post-img">
-                              <a href="{{asset('/singlepost')}}/{{$ndata->id}}/{{$ndata->slug}}">
-                                 <img src="{{asset('public/upload')}}/{{$ndata->image}}" alt="post" loading="lazy" object-fit:cover width="551" height="431">
+                              <a href="{{asset('/singlepost')}}/{{$ndata->id}}/{{$ndata->slug}}" style="height: 172px;width:360px;">
+                                 <img src="{{asset('public/upload')}}/{{$ndata->image}}" alt="post" loading="lazy" style="height:100%;width:100%;object-fit:cover">
                               </a>
                            </div>
                            <div class="post-content">

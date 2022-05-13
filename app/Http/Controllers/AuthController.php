@@ -85,7 +85,7 @@ class AuthController extends Controller
             'title'   => $request->input('title'),
             'content' =>  $request->input('content'),
             'image'   => $fileName,
-            'slug'    => Str::slug($request->title),
+            'slug'    => Str::slug($request->input('title')),
             'user_id' => $request->input('user_id'),
             'category_id' =>  $request->input('category'),
             'hit'=>'1',

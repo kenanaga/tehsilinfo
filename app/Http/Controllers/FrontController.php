@@ -22,8 +22,11 @@ class FrontController extends Controller
     public function singlepost($id){
         $data['news']= News::where('id',$id)->get();
         $datas=News::where('id',$id)->first();
+        //update olunmalidi
+        DB::table('news')->increment('hit', 1,['slug' => $datas->slug]);
+
         $data['pspecial']= News::where('category_id',12)->orderBy('created_at','Desc')->lazy();
-        $data['related']= News::where('category_id',$datas->category_id)->orderBy('created_at','Desc')->lazy();
+        $data['related']= News::where('category_id',$datas->category_id)->orderBy('created_at','Desc')->lazy()->skip(0)->take(3);
          return view('front/singlepost',$data);
      }
 

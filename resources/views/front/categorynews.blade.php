@@ -6,7 +6,7 @@
 
             <!-- start feature-section-style-1  -->
             <section class="rt-feature-section feature-section-style-1 overflow-hidden"
-               data-bg-image="media/elements/element_1.png">
+               data-bg-image="{{asset('front/media/elements/element_1.png')}}">
                <div class="container">
                   <div class="row gutter-24">
                      @foreach($pspecial as $snews)

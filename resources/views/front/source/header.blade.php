@@ -6,7 +6,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title> Neeon | Home 01 - Main </title>
+   <title> Tehsil.info |  </title>
 
    <!-- Favicon -->
    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('front/media/favicon.png')}}">
@@ -53,7 +53,7 @@
                            <a class="dark-logo" href="{{asset('/')}}">
                               <img width="162" height="52" src="{{asset('front/media/logo/logo-dark.svg')}}" alt="neeon">
                            </a>
-                           <a class="light-logo" href="index.html">
+                           <a class="light-logo" href="{{asset('/')}}">
                               <img width="162" height="52" src="{{asset('front/media/logo/logo-light.svg')}}" alt="neeon">
                            </a>
                         </div>
