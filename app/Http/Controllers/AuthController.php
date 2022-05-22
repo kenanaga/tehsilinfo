@@ -71,9 +71,9 @@ class AuthController extends Controller
     public function addPost(Request $request){
 
         $validated = $request->validate([
-            'title'   => 'required',
-            'content' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,webp|max:2048',
+            'title'   =>  'required',
+            'content' =>  'required',
+            'image'   => 'required|image|mimes:jpeg,png,jpg,webp|max:2048',
         ]);
 
         $path = public_path('public/upload');

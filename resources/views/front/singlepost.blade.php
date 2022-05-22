@@ -256,7 +256,7 @@
                                        <div class="ms-4 post-content">
                                           <a href="{{asset('/kateqoriya')}}/{{$snews->GetCategory->slug}}" class="rt-post-cat-normal">{{$snews->GetCategory->name}}</a>
                                           <h4 class="post-title">
-                                             <a href="{{asset('/singlepost')}}/{{$snews->id}}/{{$snews->title}}">
+                                             <a href="{{asset('/singlepost')}}/{{$snews->id}}/{{$snews->slug}}">
                                                 {{$snews->title}}
                                              </a>
                                           </h4>
